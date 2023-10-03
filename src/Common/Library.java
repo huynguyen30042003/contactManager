@@ -14,7 +14,14 @@ public class Library {
             phone = sc.nextLine();
             if (!phone
                     .matches("^\\(?(\\d{3})\\)?[-.]?(\\d{3})[-.]?(\\d{4})(?:\\s?(?:x|ext)\\d{1,4})?$")) {
-                System.out.println("Invalid phone. Please enter a number with minimum 10 digits.");
+                System.out.println("A phone number only has the following format");
+                System.out.println("• 1234567890");
+                System.out.println("• 123-456-7890");
+                System.out.println("• 123-456-7890 x1234");
+                System.out.println("• 123-456-7890 ext1234");
+                System.out.println("• (123)-456-7890");
+                System.out.println("• 123.456.7890");
+                System.out.println("• 123 456 7890");
             }
         } while (!phone
                 .matches("^\\(?(\\d{3})\\)?[-.]?(\\d{3})[-.]?(\\d{4})(?:\\s?(?:x|ext)\\d{1,4})?$"));
